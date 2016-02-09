@@ -1,4 +1,4 @@
-#Sum of the first nth term of Series 7kyu
+#Sum of the first nth term of Series - 7kyu
 Description:
 
 Task:
