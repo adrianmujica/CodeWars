@@ -1,18 +1,31 @@
-#Sum of the first nth term of Series - 7kyu
+#Salesman's Travel - 6kyu
 Description:
 
-Task:
+A traveling salesman has to visit clients. He got each client's address e.g. "432 Main Long Road St. Louisville OH 43071" as a list.
 
-Your task is to write a function which returns the sum of following series upto nth term(parameter).
+The basic zipcode format usually consists of two capital letters followed by a white space and five digits. The list of clients to visit was given as a string of all addresses, each separated from the others by a comma, e.g. :
 
-Series: 1 + 1/4 + 1/7 + 1/10 + 1/13 + 1/16 +...
-Rules:
+"123 Main Street St. Louisville OH 43071,432 Main Long Road St. Louisville OH 43071,786 High Street Pollocksville NY 56432".
 
-You need to round the answer upto 2 decimal places and return it as String.
-If the given value is 0 then it should return 0.00
-You will only be given Natural Numbers as arguments.
-Examples:
+To ease his travel he wants to group the list by zipcode.
 
-SeriesSum(1) => 1 = "1"
-SeriesSum(2) => 1 + 1/4 = "1.25"
-SeriesSum(5) => 1 + 1/4 + 1/7 + 1/10 + 1/13 = "1.57"
+Task
+
+The function travel will take two parameters r (list of all clients' addresses) and zipcode and returns a string in the following format:
+
+zipcode:street and town,street and town,.../nb,nb,...
+
+The street numbers must be in the same order as the streets where they belong.
+
+If a given zipcode doesn't exist in the list of clients' addresses return "zipcode:/"
+
+Examples
+
+r = "123 Main Street St. Louisville OH 43071,432 Main Long Road St. Louisville OH 43071,786 High Street Pollocksville NY 56432"
+
+travel(r, "OH 43071") --> "OH 43071:Main Street St. Louisville,Main Long Road St. Louisville/123,432"
+
+travel(r, "NY 56432") --> "NY 56432:High Street Pollocksville/786"
+
+travel(r, "NY 5643") --> "NY 5643:/"
+Note: You can see the list of all addresses and zipcodes in the test cases.
